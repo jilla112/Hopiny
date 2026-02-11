@@ -6,14 +6,6 @@ body {
   background: radial-gradient(circle at top, #ffe6f2, #ffd6e8, #ffffff);
 }
 
-/* Sparkle Canvas Layer */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 /* 404 Screen */
 #errorScreen {
   background: black;
@@ -22,12 +14,11 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
 }
 
 .highlight {
   color: hotpink;
-  text-shadow: 0 0 10px hotpink;
 }
 
 button {
@@ -37,25 +28,16 @@ button {
   cursor: pointer;
   margin: 12px;
   font-size: 18px;
-  transition: 0.3s ease;
 }
 
-/* YES Glow Pulse */
 #yesBtn {
   background: hotpink;
   color: white;
-  box-shadow: 0 0 15px hotpink;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 10px hotpink; }
-  50% { box-shadow: 0 0 30px deeppink; }
-  100% { box-shadow: 0 0 10px hotpink; }
+  box-shadow: 0 0 20px hotpink;
 }
 
 #yesBtn:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 #noBtn {
@@ -64,35 +46,33 @@ button {
   position: relative;
 }
 
-/* Main Content */
+/* Main */
 #mainContent {
   min-height: 100vh;
   padding: 80px 20px;
   opacity: 0;
-  transition: opacity 2s ease;
-}
-
-section {
-  margin: 150px 0;
+  transition: opacity 1s ease;
 }
 
 .hidden {
   display: none;
 }
 
-/* Butterflies */
+/* Butterfly (emoji based - guaranteed work) */
 .butterfly {
   position: fixed;
-  width: 35px;
-  height: 35px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/616/616408.png");
-  background-size: cover;
-  pointer-events: none;
+  font-size: 24px;
   animation: floatUp linear infinite;
+  pointer-events: none;
 }
 
 @keyframes floatUp {
   from {
-    transform: translateY(100vh) rotate(0deg);
+    transform: translateY(100vh);
     opacity: 1;
   }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
