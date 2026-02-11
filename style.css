@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Error screen */
+#errorScreen {
+  background: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight {
+  color: pink;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Timeline */
+#timeline {
+  background: #ffd6e8;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+section {
+  margin: 100px 0;
+}
+
+.hidden {
+  display: none;
+}
