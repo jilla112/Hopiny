@@ -2,10 +2,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
-  overflow-x: hidden;
 }
 
-/* 404 Screen */
+/* 404 */
 #errorScreen {
   background: #111;
   color: white;
@@ -19,53 +18,65 @@ body {
   color: hotpink;
 }
 
-button {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin: 10px;
-  font-size: 16px;
-}
-
 #recoverBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
   background: hotpink;
   color: white;
+  cursor: pointer;
 }
 
-/* Main Screen */
-#mainContent {
-  background: #ffe6f2;
-  min-height: 100vh;
-  padding-top: 150px;
-  display: none;
+/* Valentine Card */
+#cardScreen {
+  background: #f8c8dc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 #yesBtn {
-  background: hotpink;
+  background: linear-gradient(to right, #ff4b6e, #ff758c);
   color: white;
 }
 
 #noBtn {
-  background: #ccc;
-  color: black;
-  position: relative;
+  background: white;
+  border: 1px solid gray;
 }
 
-/* Butterfly */
-.butterfly {
-  position: fixed;
-  font-size: 22px;
-  animation: flyUp linear forwards;
+/* YAY */
+#yayScreen {
+  background: #f8c8dc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes flyUp {
-  from {
-    transform: translateY(100vh);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-20vh);
-    opacity: 0;
-  }
+/* Hidden */
+.hidden {
+  display: none;
 }
