@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- ERROR SCREEN -->
+<!-- 404 SCREEN -->
 <div id="errorScreen">
   <h1>Error 404 💔</h1>
   <p>Love Not Found</p>
@@ -15,26 +15,39 @@
   <button id="recoverBtn">Run Recovery Script</button>
 </div>
 
-<!-- TIMELINE SCREEN -->
-<div id="timeline" class="hidden">
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="hidden">
+
+  <!-- Butterflies -->
+  <div class="butterfly"></div>
+  <div class="butterfly delay1"></div>
+  <div class="butterfly delay2"></div>
+
   <section>
     <h2>📅 The Beginning</h2>
-    <p>From a simple hello…</p>
+    <p>From a random hello…</p>
   </section>
 
   <section>
-    <h2>😊 First Memories</h2>
-    <p>Laughs, calls, late night talks…</p>
+    <h2>💫 The Journey</h2>
+    <p>Laughs, fights, memories…</p>
   </section>
 
   <section>
-    <h2>💫 Today</h2>
+    <h2>❤️ Today</h2>
     <p>From random chapter… to forever story?</p>
-    <button id="yesBtn">Will You Be My Valentine? 💖</button>
+
+    <div class="buttons">
+      <button id="yesBtn">YES 💖</button>
+      <button id="noBtn">NO 😏</button>
+    </div>
+
     <p id="finalMsg"></p>
   </section>
+
 </div>
 
+<audio id="song" src="song.mp3"></audio>
 <script src="script.js"></script>
 </body>
 </html>
