@@ -1,10 +1,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
   text-align: center;
 }
 
-/* Error screen */
+/* 404 */
 #errorScreen {
   background: black;
   color: white;
@@ -15,28 +16,67 @@ body {
 }
 
 .highlight {
-  color: pink;
+  color: hotpink;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 10px;
+  font-size: 16px;
 }
 
-/* Timeline */
-#timeline {
-  background: #ffd6e8;
+#yesBtn {
+  background: hotpink;
+  color: white;
+}
+
+#noBtn {
+  background: gray;
+  color: white;
+  position: relative;
+}
+
+/* Main Content */
+#mainContent {
+  background: linear-gradient(to bottom, #ffd6e8, #fff);
   min-height: 100vh;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  transition: 1s;
 }
 
 section {
-  margin: 100px 0;
+  margin: 120px 0;
 }
 
 .hidden {
   display: none;
+}
+
+/* Butterfly Animation */
+.butterfly {
+  width: 40px;
+  height: 40px;
+  background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+  background-size: cover;
+  position: absolute;
+  top: 100%;
+  animation: fly 15s linear infinite;
+}
+
+.delay1 {
+  left: 20%;
+  animation-delay: 5s;
+}
+
+.delay2 {
+  left: 70%;
+  animation-delay: 8s;
+}
+
+@keyframes fly {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-120vh) rotate(360deg); }
 }
