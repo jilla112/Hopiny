@@ -3,9 +3,18 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   text-align: center;
+  background: radial-gradient(circle at top, #ffe6f2, #ffd6e8, #ffffff);
 }
 
-/* 404 */
+/* Sparkle Canvas Layer */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 404 Screen */
 #errorScreen {
   background: black;
   color: white;
@@ -13,24 +22,40 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: opacity 1.5s ease;
 }
 
 .highlight {
   color: hotpink;
+  text-shadow: 0 0 10px hotpink;
 }
 
 button {
-  padding: 12px 25px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
-  margin: 10px;
-  font-size: 16px;
+  margin: 12px;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
 
+/* YES Glow Pulse */
 #yesBtn {
   background: hotpink;
   color: white;
+  box-shadow: 0 0 15px hotpink;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px hotpink; }
+  50% { box-shadow: 0 0 30px deeppink; }
+  100% { box-shadow: 0 0 10px hotpink; }
+}
+
+#yesBtn:hover {
+  transform: scale(1.15);
 }
 
 #noBtn {
@@ -41,25 +66,25 @@ button {
 
 /* Main Content */
 #mainContent {
-  background: linear-gradient(to bottom, #ffd6e8, #fff);
   min-height: 100vh;
-  padding: 60px 20px;
-  transition: 1s;
+  padding: 80px 20px;
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 
 section {
-  margin: 120px 0;
+  margin: 150px 0;
 }
 
 .hidden {
   display: none;
 }
 
-/* Butterfly Animation */
+/* Butterflies */
 .butterfly {
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-image: url("https://cdn-icons-png.flaticon.com/512/616/616408.png");
   background-size: cover;
   pointer-events: none;
@@ -71,8 +96,3 @@ section {
     transform: translateY(100vh) rotate(0deg);
     opacity: 1;
   }
-  to {
-    transform: translateY(-10vh) rotate(360deg);
-    opacity: 0;
-  }
-}
