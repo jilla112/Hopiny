@@ -1,20 +1,18 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
   text-align: center;
-  background: radial-gradient(circle at top, #ffe6f2, #ffd6e8, #ffffff);
+  overflow-x: hidden;
 }
 
 /* 404 Screen */
 #errorScreen {
-  background: black;
+  background: #111;
   color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity 1s ease;
 }
 
 .highlight {
@@ -22,57 +20,52 @@ body {
 }
 
 button {
-  padding: 14px 28px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
-  margin: 12px;
-  font-size: 18px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+#recoverBtn {
+  background: hotpink;
+  color: white;
+}
+
+/* Main Screen */
+#mainContent {
+  background: #ffe6f2;
+  min-height: 100vh;
+  padding-top: 150px;
+  display: none;
 }
 
 #yesBtn {
   background: hotpink;
   color: white;
-  box-shadow: 0 0 20px hotpink;
-}
-
-#yesBtn:hover {
-  transform: scale(1.1);
 }
 
 #noBtn {
-  background: gray;
-  color: white;
+  background: #ccc;
+  color: black;
   position: relative;
 }
 
-/* Main */
-#mainContent {
-  min-height: 100vh;
-  padding: 80px 20px;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Butterfly (emoji based - guaranteed work) */
+/* Butterfly */
 .butterfly {
   position: fixed;
-  font-size: 24px;
-  animation: floatUp linear infinite;
-  pointer-events: none;
+  font-size: 22px;
+  animation: flyUp linear forwards;
 }
 
-@keyframes floatUp {
+@keyframes flyUp {
   from {
     transform: translateY(100vh);
     opacity: 1;
   }
   to {
-    transform: translateY(-10vh);
+    transform: translateY(-20vh);
     opacity: 0;
   }
 }
