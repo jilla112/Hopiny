@@ -57,26 +57,22 @@ section {
 
 /* Butterfly Animation */
 .butterfly {
-  width: 40px;
-  height: 40px;
-  background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/616/616408.png");
   background-size: cover;
-  position: absolute;
-  top: 100%;
-  animation: fly 15s linear infinite;
+  pointer-events: none;
+  animation: floatUp linear infinite;
 }
 
-.delay1 {
-  left: 20%;
-  animation-delay: 5s;
-}
-
-.delay2 {
-  left: 70%;
-  animation-delay: 8s;
-}
-
-@keyframes fly {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-120vh) rotate(360deg); }
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
 }
