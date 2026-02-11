@@ -4,6 +4,11 @@ body {
   text-align: center;
 }
 
+/* Hide by default */
+.hidden {
+  display: none !important;
+}
+
 /* 404 */
 #errorScreen {
   background: #111;
@@ -14,24 +19,21 @@ body {
   justify-content: center;
 }
 
-.highlight {
-  color: hotpink;
-}
-
-#recoverBtn {
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: none;
-  background: hotpink;
-  color: white;
-  cursor: pointer;
-}
-
-/* Valentine Card */
+/* Card Screen */
 #cardScreen {
   background: #f8c8dc;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* YAY Screen */
+#yayScreen {
+  background: #f8c8dc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -64,19 +66,4 @@ button {
 #noBtn {
   background: white;
   border: 1px solid gray;
-}
-
-/* YAY */
-#yayScreen {
-  background: #f8c8dc;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Hidden */
-.hidden {
-  display: none;
 }
